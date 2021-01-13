@@ -1,0 +1,315 @@
+/*--------------------------------
+                      VARIABLES
+--------------------------------*/
+$highlight-color: #4481eb;
+$highlight-text-color: #fff;
+$highlight-darker-color: #3d74d4;
+$grey: #A1A1A1;
+$black: #000;
+$white: #fff;
+$input-bg-color: #ECF0F6;
+$input-text-color: #1F3B6B;
+$placeholder-color: $grey;
+$input-border-color: $white;
+
+
+/*--------------------------------
+            			BUTTON & FORM
+--------------------------------*/
+/* ------ GLOBAL ------ */
+.item-reset {
+  display: inline-block; /*for the preview in ED*/
+	margin: 0 16px 18px;
+	text-align: center;
+	font-size: 13px;
+	font-weight: 400;
+	color: $highlight-text-color;
+	background: $highlight-color;
+	border-radius: 20px;
+	-moz-box-shadow: 0 0 27px rgba($black, 0.19);
+	-webkit-box-shadow: 0 0 27px rgba($black, 0.19);
+	box-shadow: 0 0 27px rgba($black, 0.19);
+}
+.item-reset,
+.item-reset-button,
+.item-reset button.button-action,
+.item-reset .button-header-title,
+.item-reset p.button-content-message {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	line-height: 1.2;
+}
+button.button-action,
+button.form-id-button {
+	border-radius: 20px;
+}
+
+/* ------ CONTAINER ------ */
+.dimelo_chat_mode_offline .item-reset {
+	background: $grey;
+}
+
+
+/*--------------------------------
+            BUTTON FLOATING CHAT
+--------------------------------*/
+/* ------ GLOBAL ------ */
+.button-header-title,
+p.button-content-message {
+  color: $highlight-text-color;
+}
+
+
+/* ------ WRAPPER ------ */
+.button-wrapper {
+  max-width: 205px;
+}
+.button-inner-wrapper {
+  padding: 20px 24px;
+}
+
+/* ------ HEADER ------ */
+.button-header {
+  position: relative;
+  margin: 0 0 25px 0;
+  svg {
+    fill: $highlight-text-color;
+  }
+}
+/* --- Button --- */
+.button-header-control {
+  position: absolute;
+  top: -13px;
+  right: -12px;
+}
+button.button-control-quit {
+	height: 28px;
+  padding: 8px;
+  border: 0 none;
+  border-radius: 10px;
+  background: transparent;
+  &:hover,
+  &:focus:before,
+  &:active:before {
+    background: rgba($black, .12);
+  }
+}
+/* --- Icon --- */
+.button-header-icon {
+  margin: 0 0 20px;
+}
+/* --- Title --- */
+.button-header-title {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ------ CONTENT ------ */
+.button-content-message {
+  margin: 0 0 25px;
+}
+
+/* ------ BUTTONS ------ */
+.button-actions {
+  margin: 0;
+  white-space: normal;
+  text-decoration: none;
+  cursor: pointer;
+}
+button.button-action {
+  width: 100%;
+  padding: 15px 10px;
+  position: relative;
+  border: 2px solid $highlight-text-color;
+  background: $highlight-text-color;
+  font-size: 14px;
+  font-weight: 600;
+  color: $highlight-color;
+  &:focus:before,
+  &:active:before,
+  &:hover:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 20px;
+    background-color: rgba($black, .12);
+  }
+}
+
+
+/*--------------------------------
+            							FORM
+--------------------------------*/
+/* ------ GLOBAL ------ */
+.item-reset-button {
+	color: $highlight-text-color;
+  white-space: nowrap;
+	text-align: center;
+  text-decoration: none;
+	border: 0;
+  cursor: pointer;
+	svg {
+		fill: $highlight-text-color;
+	}
+}
+
+/* ------ CONTAINER ------ */
+.item-reset.item-reset-form-id {
+  @media only screen and (max-height: 580px) {
+    top: 20px;
+  }
+  display: block;
+  max-height: 560px;
+  margin-bottom: 0;
+  position: fixed;
+  right: 0; bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow-y: scroll;
+}
+
+/* ------ WRAPPER ------ */
+.form-id-wrapper {
+	max-width: 350px;
+	min-width: 270px;
+	text-align: left;
+  display: none;
+}
+.form-id-inner-wrapper {
+	padding: 0 20px 20px;
+}
+
+/* ------ HEADER ------ */
+.form-id-header {
+	margin: 0 0 30px;
+	position: relative;
+	text-align: center;
+}
+/* --- Button --- */
+.form-id-control-close {
+  position: absolute;
+  top: 8px; right: -8px;
+}
+/* --- Title --- */
+.form-id-title {
+  margin: 0 0 10px;
+	padding: 27px 0 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* ------ CONTENT ------ */
+.form-id-row {
+	margin: 0 0 20px;
+	label {
+		margin: 0 0 6px;
+	}
+	&.form-id-row-radio,
+	&.form-id-row-checkbox {
+		position: relative;
+	}
+	&.form-id-row-radio label,
+	&.form-id-row-checkbox label {
+		padding-left: 20px;
+	}
+	input[type=radio],
+	input[type=checkbox] {
+		position: absolute;
+		top: 1px; left: 0;
+		margin: 0 5px 0 0;
+	}
+}
+.form-id-row:not(.form-id-row-checkbox):not(.form-id-row-radio) {
+	input,
+  label,
+  select,
+  textarea {
+    width: 100%;
+  }
+	input,
+  select,
+  textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 0px none;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: $input-bg-color;
+  }
+  input,
+  textarea {
+    padding: 10px 12px;
+    color: $input-text-color;
+    &::placeholder,
+    /*&:-ms-input-placeholder,
+    &::-moz-input-placeholder,*/
+    &::-webkit-input-placeholder {
+      color: $placeholder-color;
+    }
+  }
+	input,
+  select {
+    height: 40px;
+  }
+  label {
+    display: inline-block;
+    font-weight: 600;
+  }
+  select {
+    color: $placeholder-color;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  textarea {
+    max-width: 100%;
+    min-height: 100px;
+  }
+}
+.form-id-row-submit {
+	text-align: center;
+}
+
+/* ------ BUTTONS ------ */
+/* --- close ---*/
+button.form-id-control-close {
+	height: 28px;
+	padding: 8px;
+	border: 0 none;
+	border-radius: 10px;
+	background: transparent;
+	&:hover,
+	&:focus:before,
+	&:active:before {
+    background: rgba($black, .12);
+	}
+}
+/* --- submit ---*/
+button.form-id-button {
+	width: 100%;
+	max-width: 160px;
+  padding: 15px 10px;
+  position: relative;
+  border: 2px solid $highlight-text-color;
+  background: $highlight-text-color;
+  font-size: 14px;
+  font-weight: 600;
+  color: $highlight-color;
+  &:focus:before,
+  &:active:before,
+  &:hover:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 20px;
+    background-color: rgba($black, .12);
+  }
+}
